@@ -221,12 +221,32 @@ body {
 }
 
 /* Right Content Styles */
+/* Define the initial state of the .right-content element */
 .right-content {
   background-color: lightgoldenrodyellow;
   padding: 50px 0;
   height: 35vh;
+  opacity: 0; /* Start with opacity at 0 */
+  transform: translateX(50px); /* Start 50px to the right of its original position */
   margin-left: 0;
+  animation: slide-right 0.5s ease-in-out forwards; /* Apply the animation */
+  animation-iteration-count: 1;
+  border: 1px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(213, 183, 85, 0.3); /* Add a shadow */
 }
+
+/* Define the slide-right animation */
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px); /* Start 50px to the right of its original position */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to its original position */
+  }
+}
+
 
 .right-content .content {
   text-align: top;
@@ -894,15 +914,33 @@ body {
 
   /* section 2 */
 /* Base styles for columns and row */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* margin-top: 100px; */
-    padding-top: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
+/* Define the initial state of the .row element */
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 0; /* Start with opacity at 0 */
+  transform: translateY(30px); /* Start 30px below its original position */
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  animation: slide-upp 0.5s ease-in-out forwards; 
+  animation-iteration-count: 10;
+  
 }
+
+/* Define the slide-up animation */
+@keyframes slide-upp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to its original position */
+  }
+}
+
 
 .column {
     flex: 1;
@@ -914,6 +952,8 @@ body {
     text-align: center;
     position: relative;
     height: 250px;
+    border: 2px solid black; /* Add a solid black border */
+    box-shadow: 8px 8px 15px rgba(135, 70, 70, 0.3); /* Add a shadow */
 }
 
 .column-content {
@@ -930,6 +970,8 @@ body {
   text-align: center;
   position: relative;
   height: 250px;
+  border: 2px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(135, 70, 70, 0.3); /* Add a shadow */
 }
 
 .column1-content {
@@ -946,6 +988,8 @@ body {
   text-align: center;
   position: relative;
   height: 250px;
+  border: 2px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(135, 70, 70, 0.3); /* Add a shadow */
 }
 
 .column2-content {
@@ -962,6 +1006,8 @@ body {
   text-align: center;
   position: relative;
   height: 250px;
+  border: 2px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(135, 70, 70, 0.3); /* Add a shadow */
 }
 
 .column3-content {
@@ -1402,6 +1448,8 @@ body, html {
   cursor: pointer;
   padding: 15px;
   /* margin-left: 5px; */
+  border: 2px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(135, 70, 70, 0.3); /* Add a shadow */
 }
 
 .gallery-image.highlighted {
@@ -1418,6 +1466,8 @@ body, html {
   padding: 15px;
   margin-left: 15px;
   margin-top: 90px;
+  border: 2px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(135, 70, 70, 0.3); /* Add a shadow */
 }
 
 .gallery-imagee.highlighted {
@@ -1478,18 +1528,32 @@ body, html {
   margin-left: 0;
 }
 
+/* Define the initial state of the .image-box element */
 .image-box {
   position: relative;
   overflow: hidden;
-  
-
+  opacity: 0; /* Start with opacity at 0 */
+  animation: fade-in 6s ease-in-out forwards; /* Apply the animation */
+  animation-iteration-count: infinite;
 }
 
+/* Define the fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0; /* Start with opacity at 0 */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+
+/* Style for the image inside .image-box */
 .image-box img {
   width: 100%;
-  height:auto;
+  height: auto;
   padding: 15px;
 }
+
 
 .image-box h4 {
   position: absolute;

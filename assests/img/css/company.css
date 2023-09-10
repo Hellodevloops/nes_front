@@ -195,6 +195,19 @@ background-color: transparent;
 
 .right-column {
     /* background-color: #ccc; */
+    animation: slide-upp 0.5s ease-in-out forwards; 
+    animation-iteration-count: 1;
+}
+/* Define the slide-up animation */
+@keyframes slide-upp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to its original position */
+  }
 }
 
 /* Media queries */
@@ -238,6 +251,8 @@ background-color: transparent;
     min-width: calc(33.33% - 20px);
     margin: 10px;
     position: relative;
+    border: 2px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(173, 114, 114, 0.3); /* Add a shadow */
   
 }
 
@@ -306,10 +321,13 @@ background-color: transparent;
 
 
 
-.container {
-  max-width: 1200px;
+.container4 {
+  max-width: 1300px;
   margin: 0 auto;
   padding: 20px;
+  
+  width: 80%;
+  
 }
 
 /* Tabbed gallery styling */
@@ -317,21 +335,56 @@ background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  border: 4px 4px solid black;
+  padding-top: 70px;
 }
 
 .gallery-column {
   flex: 1;
+  border: 2px solid black; /* Add a solid black border */
+  box-shadow: 8px 8px 15px rgba(173, 114, 114, 0.3); /* Add a shadow */
+  margin-bottom: 20px;
 }
 
 .gallery-image {
   width: 100%;
   cursor: pointer;
+  border: 4px 4px solid black;
+}
+
+.gallery-column input[type="radio"] {
+  display: none; /* Hide the radio buttons */
+}
+
+/* Style for the label (optional) */
+.gallery-column label {
+  display: block;
+  background-color: lightgray;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Style for the gallery image */
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+.h14{
+  margin-left: 530px;
+  font-size: 45px;
+}
+
+/* Style for the gallery text */
+.gallery-text {
+  padding: 10px;
 }
 
 /* Initially hide gallery text */
 .gallery-text {
   display:block;
   color: #212529;
+  border: 4px 4px solid black;
 }
 
 /* Media query for responsiveness */
@@ -454,3 +507,9 @@ input:checked + label + .gallery-text {
   
 
 /* footer end */
+
+/* section 8 */
+
+
+
+/* section 8 end */
