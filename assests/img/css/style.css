@@ -925,7 +925,7 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   animation: slide-upp 0.5s ease-in-out forwards; 
-  animation-iteration-count: 10;
+  animation-iteration-count: 7;
   
 }
 
@@ -1426,11 +1426,13 @@ body, html {
 .image-gallery {
   width: 100%;
   overflow: hidden;
-  /* background-color: #cac7c7; */
+  background-color: #ede9e9;
+  /* background-image: url('/assests/img/bgcubes.jpg'); */
   margin-top: 10px;
   padding-top: 50px;
-  
+  /* filter: blur(0.8px);  */
 }
+
 
 .scroll-container {
   display: flex;
@@ -1475,30 +1477,107 @@ body, html {
 }
 
 
-/* .labeled-teaser {
+
+/* new */
+
+.section-container6 {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(232, 240, 248);
  
-  position: relative
-
 }
 
-.labeled-teaser__label {
-  padding: 10px;
+.column6 {
+  flex: 1;
+  padding: 40px;
+}
+
+.left-column6 {
   position: relative;
-  top: -8.5rem;
+}
+
+.left-image6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.left-image1 {
+  position: relative;
+  width: 400px;
+  height: 60vh;
+  margin-left: 80px;
+  margin-top: 40px;
+  transition: transform 0.3s ease, z-index 0.3s ease; /* Add transition properties */
+  z-index: 1; /* Set an initial z-index value */
+}
+
+.left-image2 {
+  position: relative;
+  width: 320px;
+  height: 40vh;
+  margin-left: 280px;
+  margin-top: -80px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, z-index 0.3s ease; /* Add transition properties */
+  z-index: 0; /* Set an initial z-index value */
+}
+
+/* Add hover effects */
+.left-image1:hover {
+  transform: scale(1.1); /* Scale the image on hover */
+  z-index: 2; /* Bring to the front on hover */
+}
+
+.left-image2:hover {
+  transform: scale(1.1); /* Scale the image on hover */
+  z-index: 2; /* Bring to the front on hover */
+}
+
+
+.right-column6 {
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.section-heading {
+  font-size: 24px;
+ 
+}
+
+.section-paragraph {
+  font-size: 16px;
+  color: #212529;
+  margin-top: 80px;
+}
+
+.section-icon {
+  font-size: 24px;
   margin-right: 10px;
-  margin-left: 10px;
+}
+.labeled6-teaser {
+  position: relative;
+  margin-top:-70px;
 }
 
-.labeled-teaser__main-title {
+.labeled6-teaser__labell {
+  padding: 1.25rem;
+  position: relative;
+  top: -4.5rem;
+  margin-right: 2rem;
+  margin-left: 25%
+  /* margin-top:-40px; */
+}
+
+.labeled6-teaser__main-titlee {
   line-height: 1.18182;
-  font-size: 1.375rem;
-  padding-left: 20px;
+  font-size: 1.375rem
 }
 
-.labeled-teaser__category {
-  font-size: .875rem;
-  padding-left: 20px;
-} */
+.labeled6-teaser__category {
+  font-size: .875rem
+}
  /* section 6 3end */
 
  /* section columns */
@@ -1587,6 +1666,69 @@ body, html {
 
 
  /* section columns end */
+
+ /* section 7 */
+
+ /* Style for the slider container */
+/* Style for the arrow buttons */
+.slick-prev,
+.slick-next {
+  font-size: 18px;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+  background: rgba(171, 35, 35, 0.7);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  color: #6a0e0e;
+  transition: background 0.3s ease;
+}
+
+.slick-next:before, .slick-prev:before {
+  font-family: slick;
+  font-size: 60px;
+  line-height: 1;
+  opacity: .75;
+  color: #9c1414;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: rgba(141, 34, 34, 0.9);
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
+
+/* Responsive Media Query */
+
+/* Additional media queries for other screen sizes can be added here */
+
+
+ /* section 7 end */
 
  /* footer */
  .footer {

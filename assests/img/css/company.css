@@ -191,11 +191,13 @@ background-color: transparent;
     /* background-color: #f0f0f0; */
     overflow: hidden;
     color: rgb(34, 3, 34);
+    animation: slide-upp 0.5s ease-in-out forwards; 
+    animation-iteration-count: 1;
 }
 
 .right-column {
     /* background-color: #ccc; */
-    animation: slide-upp 0.5s ease-in-out forwards; 
+    animation: slideInRight 0.5s ease-in-out;
     animation-iteration-count: 1;
 }
 /* Define the slide-up animation */
@@ -210,6 +212,16 @@ background-color: transparent;
   }
 }
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /* Media queries */
 @media (max-width: 1200px) {
     .column {
@@ -327,9 +339,13 @@ background-color: transparent;
   padding: 20px;
   
   width: 80%;
-  
-}
+  /* background-image: url('/assests/img/bgtabbed.jpg');
 
+    filter: blur(1px);  */
+    background-color: rgb(228, 225, 225);
+  }
+
+  
 /* Tabbed gallery styling */
 .tabbed-gallery {
   display: flex;
